@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shaurya Sharan - B.Tech Electrical Engineering Student at IIT Madras | JEE Advanced AIR 6377 | Seeking Internships in Signal Processing, Embedded Systems & Image Processing">
+    <title>Shaurya Sharan | IIT Madras Electrical Engineering</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+       
+        :root {
+            --electric-blue: #00d4ff;
+        }
+       
+        * {
+            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 150ms;
+        }
+       
+        .tail-container * {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+       
+        .heading-font {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .hero-bg {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+        }
+       
+        .section-header {
+            position: relative;
+        }
+       
+        .section-header::after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 3px;
+            background: #00d4ff;
+            bottom: -8px;
+            left: 0;
+        }
+       
+        .project-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+       
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgb(0 212 255 / 0.2);
+        }
+       
+        .nav-link {
+            position: relative;
+        }
+       
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #00d4ff;
+        }
+       
+        .nav-link:hover::after {
+            width: 100%;
+        }
+       
+        .circuit-bg {
+            background-image:
+                linear-gradient(#00d4ff 1px, transparent 0),
+                linear-gradient(90deg, #00d4ff 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+    </style>
+</head>
+<body class="tail-container bg-[#05050a] text-white">
+
+    <!-- NAVBAR -->
+    <nav class="bg-[#05050a]/80 backdrop-blur-lg border-b border-white/10 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+            <div class="flex items-center gap-x-3">
+                <div class="w-9 h-9 bg-[#00d4ff] rounded-2xl flex items-center justify-center text-black font-bold text-2xl">S</div>
+                <h1 class="heading-font text-2xl font-semibold tracking-tighter">Shaurya Sharan</h1>
+            </div>
+           
+            <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
+                <a href="#about" class="nav-link text-white/80 hover:text-white">About</a>
+                <a href="#education" class="nav-link text-white/80 hover:text-white">Education</a>
+                <a href="#projects" class="nav-link text-white/80 hover:text-white">Projects</a>
+                <a href="#skills" class="nav-link text-white/80 hover:text-white">Skills</a>
+                <a href="#experience" class="nav-link text-white/80 hover:text-white">Experience</a>
+                <a href="#achievements" class="nav-link text-white/80 hover:text-white">Achievements</a>
+            </div>
+           
+            <div class="flex items-center gap-x-4">
+                <a href="https://www.linkedin.com/in/shaurya-sharan-6308b9374" target="_blank"
+                   class="flex items-center gap-x-2 px-5 py-2.5 bg-white/10 hover:bg-white/20 rounded-3xl text-sm font-semibold">
+                    LinkedIn
+                </a>
+               
+                <!-- Main Resume button now opens for VIEWING in browser -->
+                <a href="https://drive.google.com/file/d/1E5qu2jq00eLWH0LLnZHwoTvESUGVo68e/view?usp=sharing" 
+                   target="_blank"
+                   class="flex items-center gap-x-2 px-6 py-2.5 bg-[#00d4ff] hover:bg-[#00b8e0] text-black font-semibold rounded-3xl text-sm">
+                    Resume
+                </a>
+               
+                <button onclick="toggleMobileMenu()" class="md:hidden text-2xl">
+                    <i class="fas fa-bars" id="menu-icon"></i>
+                </button>
+            </div>
+        </div>
+       
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#05050a] border-t border-white/10 px-6 py-4">
+            <div class="flex flex-col gap-y-4 text-sm">
+                <a href="#about" class="py-2">About</a>
+                <a href="#education" class="py-2">Education</a>
+                <a href="#projects" class="py-2">Projects</a>
+                <a href="#skills" class="py-2">Skills</a>
+                <a href="#experience" class="py-2">Experience</a>
+                <a href="#achievements" class="py-2">Achievements</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero-bg min-h-screen flex items-center relative overflow-hidden">
+        <div class="circuit-bg absolute inset-0 opacity-10 md:opacity-5 pointer-events-none"></div>
+       
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-12 items-center relative z-10">
+            <!-- Left Content -->
+            <div class="md:col-span-7">
+                <div class="inline-flex items-center gap-x-2 bg-white/10 text-white text-sm px-5 py-2 rounded-3xl mb-6">
+                    <div class="w-2 h-2 bg-[#00d4ff] rounded-full animate-pulse"></div>
+                    IIT Madras • B.Tech Electrical Engineering • 2025-Present
+                </div>
+               
+                <h1 class="heading-font text-6xl md:text-7xl font-semibold leading-none tracking-tighter mb-4 text-white">
+                    Hi, I'm <span class="text-[#00d4ff]">Shaurya Sharan</span>
+                </h1>
+               
+                <p class="text-2xl md:text-3xl text-white mb-6">
+                    Electrical Engineering Student passionate about<br>
+                    <span class="text-[#00d4ff]">Signal Processing • Computer Vision • Image/Video Processing</span>
+                </p>
+               
+                <p class="max-w-lg text-white/90 text-lg mb-8">
+                    JEE Advanced AIR 6377 • Gold-medal winning Inter-IIT Cricketer • BCCI National-Level Cricketer
+		</p>
+               
+                <div class="flex flex-wrap gap-4">
+                    <a href="#projects"
+                       class="inline-flex items-center gap-x-3 px-8 py-4 bg-[#00d4ff] hover:bg-[#00b8e0] text-black font-semibold text-lg rounded-3xl">
+                        View My Projects
+                    </a>
+                   
+                    <a href="mailto:shaurya6777@gmail.com"
+                       class="inline-flex items-center gap-x-3 px-8 py-4 border border-white/40 hover:border-[#00d4ff] rounded-3xl text-lg font-medium text-white">
+                        Get in touch
+                    </a>
+                   
+                    <a href="https://www.linkedin.com/in/shaurya-sharan-6308b9374" target="_blank"
+                       class="inline-flex items-center px-6 py-4 border border-white/40 hover:border-[#00d4ff] rounded-3xl text-lg font-medium text-white">
+                        LinkedIn
+                    </a>
+                </div>
+               
+                <div class="mt-12 flex items-center gap-x-8 text-sm">
+                    <div>
+                        <span class="block text-[#00d4ff] text-3xl font-semibold">8.34</span>
+                        <span class="text-white/70">Current CGPA</span>
+                    </div>
+                    <div class="h-10 w-px bg-white/20"></div>
+                    <div>
+                        <span class="block text-[#00d4ff] text-3xl font-semibold">AIR 6377</span>
+                        <span class="text-white/70">JEE Advanced 2025</span>
+                    </div>
+                    <div class="h-10 w-px bg-white/20"></div>
+                    <div>
+                        <span class="block text-[#00d4ff] text-3xl font-semibold">Gold Medal</span>
+                        <span class="text-white/70">Inter-IIT Cricket</span>
+                    </div>
+                </div>
+            </div>
+           
+            <!-- Right Visual - Your Personal Photo -->
+            <div class="md:col-span-5 relative flex justify-center">
+                <div class="relative">
+                    <div class="bg-[#111827] border border-[#00d4ff]/30 rounded-3xl p-4 shadow-2xl">
+                        <img src="profile.jpeg" 
+                             alt="Shaurya Sharan - IIT Madras Electrical Engineering"
+                             class="w-full aspect-square object-cover rounded-2xl">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-24 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-12 gap-16">
+                <div class="md:col-span-4">
+                    <h2 class="section-header text-5xl heading-font font-semibold tracking-tighter">About Me</h2>
+                </div>
+                <div class="md:col-span-8 text-lg leading-relaxed text-white/90">
+                    <p class="mb-6">
+                        First-year B.Tech Electrical Engineering student at <strong class="text-[#00d4ff]">IIT Madras</strong> with a strong foundation in digital systems, signals & systems, and a growing passion for signal processing and computer vision.
+                    </p>
+                    <p>
+                        Beyond academics, I represented Mumbai in cricket and won the national level BCCI U-16 Vijay Merchant Trophy. At IIT Madras, I'm actively involved in the Finance Club and Placement Cell while balancing technical projects that combine hardware design with AI/ML applications.
+                    </p>
+                    <p class="mt-6 text-white/80">
+                        Currently seeking summer 2026 internships in Computer Vision/AI, VLSI, Signal Processing, or Image Processing.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="py-24 bg-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="section-header text-5xl heading-font font-semibold tracking-tighter mb-12">Education</h2>
+           
+            <div class="bg-[#111827] rounded-3xl p-8 md:p-10">
+                <table class="w-full">
+                    <thead>
+                        <tr class="border-b border-white/10">
+                            <th class="text-left py-4 font-medium text-white/60">Degree</th>
+                            <th class="text-left py-4 font-medium text-white/60">Institute</th>
+                            <th class="text-left py-4 font-medium text-white/60">CGPA / %</th>
+                            <th class="text-left py-4 font-medium text-white/60">Year</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-white/10 text-lg">
+                        <tr>
+                            <td class="py-6">B.Tech. Major - Electrical Engineering</td>
+                            <td class="py-6">Indian Institute of Technology Madras</td>
+                            <td class="py-6 font-semibold text-[#00d4ff]">8.34 (Current)</td>
+                            <td class="py-6">2025 – Present</td>
+                        </tr>
+                        <tr>
+                            <td class="py-6">Senior Secondary (HSC)</td>
+                            <td class="py-6">LR Tiwari College</td>
+                            <td class="py-6 font-semibold">89.8%</td>
+                            <td class="py-6">2025</td>
+                        </tr>
+                        <tr>
+                            <td class="py-6">Secondary (SSC)</td>
+                            <td class="py-6">S.V.I.S.</td>
+                            <td class="py-6 font-semibold">91.8%</td>
+                            <td class="py-6">2023</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="py-24">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="section-header text-5xl heading-font font-semibold tracking-tighter mb-8">Featured Projects</h2>
+            <p class="text-white/60 mb-12 max-w-lg">Hands-on work blending hardware design, digital systems, and AI-powered computer vision.</p>
+           
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="project-card bg-[#111827] rounded-3xl p-8 border border-white/10">
+                    <div class="flex justify-between items-start mb-6">
+                        <div>
+                            <span class="px-4 py-1 text-xs font-medium bg-[#00d4ff]/10 text-[#00d4ff] rounded-full">AI + Computer Vision</span>
+                            <h3 class="text-3xl font-semibold mt-4">SportLens</h3>
+                            <p class="text-white/60 text-sm">Aug 2025 – Nov 2025 • BuildSchool 7.0</p>
+                        </div>
+                        
+                    </div>
+                    <div class="prose text-white/90 mb-8">
+                        <p>Conceptualized an AI-based player comparison platform that uses <strong>YOLO computer vision</strong> to analyze sport-specific skills instead of relying only on traditional statistics.</p>
+                        <p>Developed a weighted scoring system to objectively rank players by assigning different importance to individual skill components for holistic, data-driven performance comparison.</p>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs px-3 py-1 bg-white/10 rounded-full">YOLO</span>
+                        <span class="text-xs px-3 py-1 bg-white/10 rounded-full">Python</span>
+                        <span class="text-xs px-3 py-1 bg-white/10 rounded-full">Computer Vision</span>
+                        <span class="text-xs px-3 py-1 bg-white/10 rounded-full">AI/ML</span>
+                    </div>
+                </div>
+               
+                <div class="project-card bg-[#111827] rounded-3xl p-8 border border-white/10">
+                    <div class="flex justify-between items-start mb-6">
+                        <div>
+                            <span class="px-4 py-1 text-xs font-medium bg-[#00d4ff]/10 text-[#00d4ff] rounded-full">Hardware • Digital Systems</span>
+                            <h3 class="text-3xl font-semibold mt-4">Multi-Frequency Bidirectional Digital Counter</h3>
+                            <p class="text-white/60 text-sm">Jan 2026 – Apr 2026 • Digital Systems Lab (EE2702)</p>
+                        </div>
+                        
+                    </div>
+                    <div class="prose text-white/90 mb-8">
+                        <p>Designed and implemented a programmable bidirectional digital counter using 74LS-series ICs (multiplexers, adders, comparators, timers) supporting variable frequencies and negative numbers.</p>
+                        <p>Optimized hardware cost with a persistence-of-vision multiplexed display system — driving multiple 7-segment displays using a single driver IC via time-division switching.</p>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs px-3 py-1 bg-white/10 rounded-full">74LS ICs</span>
+                        <span class="text-xs px-3 py-1 bg-white/10 rounded-full">Digital Logic</span>
+                        <span class="text-xs px-3 py-1 bg-white/10 rounded-full">Multiplexing</span>
+                        <span class="text-xs px-3 py-1 bg-white/10 rounded-full">Arduino / ESP32 compatible</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="py-24 bg-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="section-header text-5xl heading-font font-semibold tracking-tighter mb-12">Skills & Tools</h2>
+           
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="bg-[#111827] p-6 rounded-3xl">
+                    <h4 class="font-semibold mb-4 text-[#00d4ff]">Programming</h4>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-5 py-2 bg-white/10 rounded-3xl text-sm">Python</span>
+                        <span class="px-5 py-2 bg-white/10 rounded-3xl text-sm">C / C++</span>
+                    </div>
+                </div>
+               
+                <div class="bg-[#111827] p-6 rounded-3xl">
+                    <h4 class="font-semibold mb-4 text-[#00d4ff]">Tools & Frameworks</h4>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-5 py-2 bg-white/10 rounded-3xl text-sm">MATLAB / Simulink</span>
+                        <span class="px-5 py-2 bg-white/10 rounded-3xl text-sm">Arduino</span>
+                        <span class="px-5 py-2 bg-white/10 rounded-3xl text-sm">ESP32</span>
+                    </div>
+                </div>
+               
+                <div class="bg-[#111827] p-6 rounded-3xl">
+                    <h4 class="font-semibold mb-4 text-[#00d4ff]">Interest Areas</h4>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-5 py-2 bg-white/10 rounded-3xl text-sm">Signal Processing</span>
+                        <span class="px-5 py-2 bg-white/10 rounded-3xl text-sm">Analog Systems</span>
+                        <span class="px-5 py-2 bg-white/10 rounded-3xl text-sm">Image & Video Processing</span>
+                    </div>
+                </div>
+               
+                <div class="bg-[#111827] p-6 rounded-3xl">
+                    <h4 class="font-semibold mb-4 text-[#00d4ff]">Key Courses</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-center gap-x-3"> Linear Algebra & Multivariable Calculus</li>
+                        <li class="flex items-center gap-x-3"> Digital Systems</li>
+                        <li class="flex items-center gap-x-3"> Signals & Systems</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="py-24">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="section-header text-5xl heading-font font-semibold tracking-tighter mb-12">Positions of Responsibility</h2>
+           
+            <div class="space-y-10">
+                <div class="flex flex-col md:flex-row gap-6 bg-white/5 rounded-3xl p-8">
+                    <div class="md:w-48 text-sm text-white/60">Sept 2025 – Present</div>
+                    <div class="flex-1">
+                        <h4 class="text-xl font-semibold">Deputy Coordinator, Finance Club, IIT Madras</h4>
+                        <p class="mt-2 text-white/90">Organized '36 Wall Street' – flagship financial literacy event. Led Samruddhi outreach program for government school students.</p>
+                    </div>
+                </div>
+               
+                <div class="flex flex-col md:flex-row gap-6 bg-white/5 rounded-3xl p-8">
+                    <div class="md:w-48 text-sm text-white/60">Aug 2025 – Present</div>
+                    <div class="flex-1">
+                        <h4 class="text-xl font-semibold">Contingent Member, Inter-IIT Sports (Cricket)</h4>
+                        <p class="mt-2 text-white/90">Represented IIT Madras in the gold-medal winning cricket team at the 57th Inter-IIT Sports Meet — institute's first gold in 31 years.</p>
+                    </div>
+                </div>
+               
+                <div class="flex flex-col md:flex-row gap-6 bg-white/5 rounded-3xl p-8">
+                    <div class="md:w-48 text-sm text-white/60">Aug 2025 – Dec 2025</div>
+                    <div class="flex-1">
+                        <h4 class="text-xl font-semibold">Volunteer, Placement Cell, IIT Madras</h4>
+                        <p class="mt-2 text-white/90">Coordinated recruitment assessment processes for multiple visiting companies.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ACHIEVEMENTS -->
+    <section id="achievements" class="py-24 bg-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="section-header text-5xl heading-font font-semibold tracking-tighter mb-12">Achievements</h2>
+           
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-[#111827] rounded-3xl p-8 flex gap-6">
+                    <div class="text-6xl font-bold text-[#00d4ff]">6377</div>
+                    <div>
+                        <p class="font-semibold">JEE Advanced 2025</p>
+                        <p class="text-white/70">All India Rank among 1.5 lakh candidates</p>
+                    </div>
+                </div>
+               
+                <div class="bg-[#111827] rounded-3xl p-8 flex gap-6">
+                    <div class="text-6xl font-bold text-[#00d4ff]">1.5%</div>
+                    <div>
+                        <p class="font-semibold">JEE Mains 2025</p>
+                        <p class="text-white/70">Top percentile among 15+ lakh candidates</p>
+                    </div>
+                </div>
+               
+                <div class="bg-[#111827] rounded-3xl p-8">
+                    <p class="font-semibold">Vijay Merchant Trophy (U-16) • 2023-24</p>
+                    <p class="text-white/70">Represented Mumbai and won the national championship</p>
+                </div>
+               
+                <div class="bg-[#111827] rounded-3xl p-8">
+                    <p class="font-semibold">Hindustan Times Best Cricketer of The Year • 2023</p>
+                    <p class="text-white/70">One of the highest scorers in a 150+ team tournament</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT & FOOTER -->
+    <footer class="bg-black py-16 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-12 gap-12">
+                <div class="md:col-span-5">
+                    <h2 class="text-4xl heading-font font-semibold mb-6">Let's connect</h2>
+                    <p class="text-white/70 max-w-xs">Open to internship opportunities in Electrical Engineering</p>
+                   
+                    <div class="mt-10 space-y-6">
+                        <a href="mailto:shaurya6777@gmail.com" class="flex items-center gap-x-4 text-white/80 hover:text-white text-lg">
+                           
+                            <span>Email ID: shaurya6757@gmail.com</span>
+                        </a>
+                        <a href="tel:+919967623503" class="flex items-center gap-x-4 text-white/80 hover:text-white text-lg">
+                            
+                            <span>Mobile No: +91 99676 23503</span>
+                        </a>
+                    </div>
+                </div>
+               
+                <div class="md:col-span-7">
+                    <div class="bg-white/5 rounded-3xl p-8 md:p-10">
+                        <p class="text-sm uppercase tracking-widest text-white/50 mb-4">Quick Links</p>
+                        <div class="flex flex-wrap gap-x-8 gap-y-3 text-lg">
+                            <a href="#projects" class="hover:text-[#00d4ff]">Projects</a>
+                            <a href="https://www.linkedin.com/in/shaurya-sharan-6308b9374" target="_blank" class="hover:text-[#00d4ff]">LinkedIn</a>
+                            <!-- Download link remains direct download -->
+                            <a href="https://drive.google.com/uc?export=download&id=1E5qu2jq00eLWH0LLnZHwoTvESUGVo68e" target="_blank" class="hover:text-[#00d4ff]">Download Resume</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+            menu.classList.toggle('hidden');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-xmark');
+        }
+       
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') === '#') return;
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) target.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+       
+        console.log('%c✅ Shaurya Sharan Portfolio updated successfully! ⚡', 'color:#00d4ff; font-family:monospace;');
+    </script>
+</body>
+</html>
